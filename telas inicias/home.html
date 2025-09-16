@@ -1,240 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <title>KHULUMA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css"> 
+  <title>KHULUMA</title>
 </head>
 <body>
 
-    <!--Tela Inicio  -->
-    <section class="tela inicio">
-    <img src="logos/logo (2).png" alt="">
-    </section>
+  <!-- Tela Inicio -->
+  <section id="tela-inicio" class="tela inicio">
+    <img src="logos/logo (2).png" alt="Logo KHULUMA">
+  </section>
   
-<!-- Tela Bem Vindo -->
-        <section class="tela bem-vindo">
-            <p>Bem-Vindo(a)!</p>
-     <img src="logos/logo (2).png" alt="">
-        </section>
+  <!-- Tela Bem Vindo 1 -->
+  <section id="tela-bem-vindo-1" class="tela bem-vindo">
+    <p>Bem-Vindo(a)!</p>
+    <img src="logos/logo (2).png" alt="Logo KHULUMA">
+  </section>
 
-        <!-- Tela Bem Vindo 2  -->
-        <section class="tela bem-vindo2">
-              <p> Bem-vindo(a)!</p>
-            <p>A KHULUMA é uma inovação que </p>
-              <p>vem para facilitar o aprendizado </p>
-               <p> das nossas línguas e culturas do </p>
-               <p> nosso vasto país</p>
-                    <img src="logos/estatuabaixa.png" alt="">
-                        <button>Proximo</button>
-        </section>
+  <!-- Tela Bem Vindo 2 -->
+  <section id="tela-bem-vindo-2" class="tela bem-vindo2">
+    <div class="image-side">
+      <img src="logos/estatuabaixa.png" alt="Estatueta">
+    </div>
+    <div class="content-side">
+      <p>Bem-vindo(a)!</p>
+      <p>A KHULUMA é uma inovação que</p>
+      <p>vem para facilitar o aprendizado</p>
+      <p>das nossas línguas e culturas do</p>
+      <p>nosso vasto país</p>
+      <button id="btn-proximo">Proximo</button>
+    </div>
+  </section>
 
-<!-- Tela Bem Vindo 3 -->
+  <!-- Tela Bem Vindo 3 -->
+  <section id="tela-bem-vindo-3" class="tela bem-vindo3"> 
+    <div class="image-side">
+      <img src="logos/bandeira.png" alt="Bandeira">
+    </div>
+    <div class="content-side">
+      <p>Vamos juntos aprender a nossa</p>
+      <p>cultura e a preservar esse</p>
+      <p>patrimonio.</p>
+      <p>Estás pronto? Vamos!</p>        
+      <button id="btn-continuar">Continuar</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>  
+
+  <!-- Criar conta -->
+  <section id="tela-criar-conta" class="tela criar-conta">
+    <div class="criar-conta">
+      <img src="logos/logo (2).png" alt="Logótipo KHULUMA">
+      <h1>Criando uma Conta</h1>
+    </div> 
+
+    <div class="criar-conta-passo-a-passo">
+      <h1>Criar Conta</h1>
+
+      <form action="/registar" method="post" >
+        <div>
+          <label for="nome">Nome Completo</label>
+          <input id="nome" name="nome" type="text" autocomplete="name" required/>
+        </div>
+
+        <div>
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required/>
+        </div>
+
+        <div>
+          <label for="localizacao">Localização (Província ou Distrito)</label>
+          <input id="localizacao" name="localizacao" type="text" autocomplete="address-level1" required />
+        </div>
+
+        <div>
+          <label for="senha">Senha</label>
+          <input id="senha" name="senha" type="password" minlength="8" autocomplete="new-password" required pattern="(?=.*[A-Za-z])(?=.*\d).{8,}"
+             title="Use pelo menos 8 caracteres com letras e números."/>
+          <small>No mínimo 8 caracteres. Ex: Fulano123</small>
+        </div> 
+
+        <div>
+          <label for="confirmar-senha">Confirmar Senha</label>
+          <input id="confirmar-senha" name="confirmar_senha" type="password" minlength="8" autocomplete="new-password" required  data-match="#reg-senha"
+             data-match-msg="As senhas não coincidem."/>
+        </div>
+
+        <div class="checkbox-group">
+          <input id="lembrar" name="lembrar" type="checkbox">
+          <label for="lembrar">Lembrar-me</label>
+        </div>
+
+        <div class="checkbox-group">
+          <input id="termos" name="termos" type="checkbox" required>
+          <label for="termos">Aceito todos os termos de compromisso.</label>
+        </div>
+
+        <div>
+          <button type="submit">Acessar</button>
+        </div> 
+
+        <p>Já tenho uma conta: <a href="/entrar">ENTRAR</a></p>
+        <p>Ou</p>
+
+        <fieldset>
+          <legend>Entrar com:</legend>
+          <div class="social-icons">
+            <a href="/oauth/google" aria-label="Entrar com Google">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="/oauth/facebook" aria-label="Entrar com Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="/oauth/instagram" aria-label="Entrar com Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </fieldset>
+      </form>
+    </div> 
  
-        <section class="tela bem-vindo4"> 
-    <p>Vamos juntos aprender a nossa</p>
-        <p>cultura e a preservar esse</p>
-        <p> patrimonio.</p>
+    <aside>
+      <h2>Criando uma conta</h2>
+    </aside>
+  </section>
 
-        <p>Estás pronto? Vamos!</p>        
-<img src="logos/bandeira.png" alt="">
-<button>Continuar</button>
-        </section>
-
-<!-- criar conta  -->
-<section class="tela criar-conta">
-  <div class="criar-conta">
-    <img src="logos/logo (2).png" alt="Logótipo KHULUMA">
-    <h1>Criando uma Conta</h1>
-  </div>
-
-  <div class="criar-conta-passo-a-passo">
-    <h1>Criar Conta</h1>
-
-    <form action="/registar" method="post" novalidate>
-      <div>
-        <label for="nome">Nome Completo</label>
-        <input id="nome" name="nome" type="text" autocomplete="name" required>
-      </div>
-
-      <div>
-        <label for="email">E-mail</label>
-        <input id="email" name="email" type="email" autocomplete="email" required>
-      </div>
-
-      <div>
-        <label for="localizacao">Localização (Província ou Distrito)</label>
-        <input id="localizacao" name="localizacao" type="text" autocomplete="address-level1" required>
-      </div>
-
-      <div>
-        <label for="senha">Senha</label>
-        <input id="senha" name="senha" type="password" minlength="8" autocomplete="new-password" required>
-        <small>No mínimo 8 caracteres. Ex: Fulano123</small>
-      </div>
-
-      <div>
-        <label for="confirmar-senha">Confirmar Senha</label>
-        <input id="confirmar-senha" name="confirmar_senha" type="password" minlength="8" autocomplete="new-password" required>
-      </div>
-
-      <div>
-        <input id="lembrar" name="lembrar" type="checkbox">
-        <label for="lembrar">Lembrar-me</label>
-      </div>
-
-      <div>
-        <input id="termos" name="termos" type="checkbox" required>
-        <label for="termos">Aceito todos os termos de compromisso.</label>
-      </div>
-
-      <div>
-        <button type="submit">Acessar</button>
-      </div>
-
-      <p>Já tenho uma conta: <a href="/entrar">ENTRAR</a></p>
-
-      <p>Ou</p>
-
-      <fieldset>
-        <legend>Entrar com:</legend>
-        <!-- Substitui os hrefs pelos endpoints reais de OAuth -->
-        <a href="/oauth/google" aria-label="Entrar com Google">Google</a>
-        <a href="/oauth/facebook" aria-label="Entrar com Facebook">Facebook</a>
-        <a href="/oauth/instagram" aria-label="Entrar com Instagram">Instagram</a>
-      </fieldset>
-    </form>
-  </div>
-
-  <!-- Painel ilustrativo da direita, sem estilos -->
-  <aside>
-    <h2>Criando uma conta</h2>
-  </aside>
-</section>
-
-
- <!-- Tela Login -->
-<section class="tela login">
-    <div class="login-direita">
-        <img src="logos/logo (2).png" alt="Logo KHULUMA">
-        <h1>Entrar</h1>
-    </div>
-
-    <div class="login-direita">
-        <h2>Entrar</h2>
-        <form>
-            <label for="email">Digite o seu E-mail</label>
-            <input type="email" id="email" name="email">
-
-            <label for="senha">Digite a sua senha</label>
-            <input type="password" id="senha" name="senha">
-
-            <div>
-                <input type="checkbox" id="lembrar">
-                <label for="lembrar">Lembrar-me</label>
-                <a href="#">Esqueci minha senha.</a>
-            </div>
-
-            <button type="submit">Acessar</button>
-            <p>Ou</p>
-            <button type="button">Entrar com Google</button>
-        </form>
-
-        <p>Se ainda não tem uma conta, clique em <a href="#">Criar Conta</a></p>
-       
-<div class="social-icons">
-    <a href="#"><i class="fab fa-google"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-</div>
-
-    </div>
-</section>
-
-<!-- Recuperar senha – pedir e-mail -->
-<section class="tela recuperar-senha-email">
-  <div>
-    <img src="logos/logo (2).png" alt="Logótipo KHULUMA">
-    <h2>Redefinir senha</h2>
-    <p>Digite o seu e-mail e receberá uma mensagem com o código para a redefinição da sua senha.</p>
-
-    <form action="/recuperar" method="post" novalidate>
-      <label for="rec-email">Digite o seu E-mail</label>
-      <input id="rec-email" name="email" type="email" autocomplete="email" required>
-
-      <div>
-        <button type="submit">Enviar</button>
-        <a href="/suporte">Contactar suporte</a>
-      </div>
-    </form>
-  </div>
-</section>
-
-<!-- Verificação – inserir código enviado por e-mail -->
-<section class="tela verificar-codigo">
-  <div>
-    <img src="logos/logo (2).png" alt="Logótipo KHULUMA">
-    <h2>Verificação</h2>
-    <p>Digite o código que enviamos no seu e-mail para iniciar sessão.</p>
-
-    <form action="/verificar-codigo" method="post" novalidate>
-      <div>
-        <label for="code-1">Código</label>
-        <!-- cinco caixas para 1 dígito cada -->
-        <input id="code-1" name="c1" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
-        <input id="code-2" name="c2" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
-        <input id="code-3" name="c3" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
-        <input id="code-4" name="c4" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
-        <input id="code-5" name="c5" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
-      </div>
-
-      <button type="submit">Enviar</button>
-
-      <p>Ainda não recebi o código. <a href="/suporte">Contactar suporte</a>.</p>
-    </form>
-  </div>
-</section>
-
-<!-- Redefinir senha – nova senha e confirmar -->
-<section class="tela redefinir-senha">
-  <div>
+   <!-- Verificação – inserir código enviado por e-mail -->
+  <section id="tela-verificar-codigo" class="tela verificar-codigo">
     <div>
       <img src="logos/logo (2).png" alt="Logótipo KHULUMA">
-      <h2>Redefinir senha</h2>
+      <p>Digite o código que enviamos no seu e-mail para iniciar sessão.</p>
+
+      <form action="/verificar-codigo" method="post" >
+        <div>
+          <input id="code-1" name="c1" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+          <input id="code-2" name="c2" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+          <input id="code-3" name="c3" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+          <input id="code-4" name="c4" type="text" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+        </div>
+
+        <button type="submit">Enviar</button>
+        <p>Ainda não recebi o código. <a href="/suporte">Contactar suporte</a>.</p>
+      </form>
     </div>
+  </section> 
+  
+<!-- Tela Login -->
+<section id="tela-login" class="tela login is-active">
+  <div class="login-left">
+    <div class="content">
+      <img src="logos/logo (2).png" alt="Logo KHULUMA">
+      <h2>Entrar</h2>
+    </div>
+  </div>
+     
+  <!-- tela direita -->
+   <div class="login-right">
+    <div class="content">
+      <h2>Entrar</h2>
 
-    <form action="/redefinir-senha" method="post" novalidate>
-      <label for="nova-senha">Digite sua nova senha</label>
-      <input id="nova-senha" name="senha" type="password" minlength="8" autocomplete="new-password" required>
+      <form class="auth-form" novalidate autocomplete="off">
+        <div class="field">
+          <span class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M4 6h16v12H4V6z" stroke="currentColor" stroke-width="2" />
+              <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </span>
+          <input type="email" id="email" placeholder="Digite o seu E-mail" required>
+        </div>
 
-      <label for="confirma-senha">Confirmar sua nova senha</label>
-      <input id="confirma-senha" name="confirmar_senha" type="password" minlength="8" autocomplete="new-password" required>
+        <div class="field">
+          <span class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 10V7a4 4 0 1 1 8 0v3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </span>
+          <input type="password" id="senha" placeholder="Digite a sua senha" required>
+        </div>
 
-      <div>
-        <input id="lembrar-redef" name="lembrar" type="checkbox">
-        <label for="lembrar-redef">Lembrar-me</label>
+        <div class="row remember">
+          <label class="checkbox">
+            <input type="checkbox" id="lembrar">
+            <span class="check"></span>
+            <span>Lembrar-me</span>
+          </label>
+          <a class="forgot" href="#">Esqueci minha senha.</a>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Acessar</button>
+        <div class="divider"><span>Ou</span></div>
+        <button class="btn btn-google" type="button">Entrar com Google</button>
+      </form>
+
+      <p>Se ainda não tem uma conta, clique em <a href="#">Criar Conta</a></p>
+      <div class="social-icons">
+        <a href="/oauth/google" aria-label="Entrar com Google">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="/oauth/facebook" aria-label="Entrar com Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="/oauth/instagram" aria-label="Entrar com Instagram">
+              <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Recuperar senha – pedir e-mail -->
+  <section id="tela-recuperar-senha-email" class="tela recuperar-senha-email">
+  <div class="card">
+    <img class="logo" src="logos/logo (2).png" alt="Logótipo KHULUMA">
+
+    <h2 class="titulo">Redefinir senha</h2>
+
+    <p class="descricao">
+      Digite o seu e-mail e receberá uma mensagem com o código
+      para a redefinição da sua senha.
+    </p>
+
+    <form action="/recuperar" method="post" class="form" novalidate>
+      <label for="rec-email" class="label">Digite o seu E-mail</label>
+
+      <div class="input-line">
+        <span class="icon" aria-hidden="true">✉</span>
+        <input id="rec-email" name="email" type="email" autocomplete="email" required />
       </div>
 
-      <button type="submit">Iniciar Sessão</button>
-
-      <p>Ou</p>
-      <a href="/oauth/google">Entrar com Google</a>
-
-      <p>Se ainda não tem uma conta clica em <a href="/criar-conta">Criar Conta</a></p>
-
-      <div class="social-icons">
-        <a href="/oauth/google" aria-label="Google"><i class="fab fa-google"></i></a>
-        <a href="/oauth/facebook" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="/oauth/instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <div class="actions">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <a href="/suporte" class="btn btn-primary btn-ghost">Contactar suporte</a>
       </div>
     </form>
   </div>
 </section>
- 
 
 
+  <!-- Redefinir senha -->
+<section id="redefinir-senha" class="tela redefinir is-active">
+    <!-- redefinir-senha-esquerda -->
+  <div class="redefinir-left">
+    <div class="content">
+      <img src="logos/logo (2).png" alt="Logo KHULUMA">
+      <h2>Bem-Vindo(a)</h2>
+      <h3>de volta!</h3>
+    </div>
+  </div>
+     
+  <!-- redefiir-senha-direita -->
+   <div class="redefinir-right">
+    <div class="content">
+      <h2>Redefinir senha</h2>
+
+      <form class="auth-form" autocomplete="off">
+        <div class="field">
+          <span class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M4 6h16v12H4V6z" stroke="currentColor" stroke-width="2" />
+              <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </span>
+          <input type="email" id="email" placeholder="Digite o seu E-mail" required>
+        </div>
+
+        <div class="field">
+          <span class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 10V7a4 4 0 1 1 8 0v3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </span>
+          <input type="password" id="senha" placeholder="Digite a sua senha" required    pattern="(?=.*[A-Za-z])(?=.*\d).{8,}"
+             title="Use pelo menos 8 caracteres com letras e números."/>
+        </div>
+
+        <div class="row remember">
+          <label class="checkbox">
+            <input type="checkbox" id="lembrar">
+            <span class="check"></span>
+            <span>Lembrar-me</span>
+          </label>
+          <!-- <a class="forgot" href="#">Esqueci minha senha.</a> -->
+        </div>
+
+        <button class="btn btn-primary" type="submit">Acessar</button>
+        <div class="divider"><span>Ou</span></div>
+        <button class="btn btn-google" type="button">Entrar com Google</button>
+      </form>
+
+      <p>Se ainda não tem uma conta, clique em <a href="#">Criar Conta</a></p>
+      <div class="social-icons">
+        <a href="/oauth/google" aria-label="Entrar com Google">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="/oauth/facebook" aria-label="Entrar com Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="/oauth/instagram" aria-label="Entrar com Instagram">
+              <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </div>
+</section>
 
 </body>
-</html>
+</html> 
+

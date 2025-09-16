@@ -1,0 +1,959 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+.tela.is-active { display: flex; }
+/* Esconde todas as telas por padrão */
+.tela {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+
+/* Tela 1 */
+#tela-inicio {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tela-inicio img {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+/* Tela 2 */
+#tela-bem-vindo-1 {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#tela-bem-vindo-1 img {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+#tela-bem-vindo-1 p {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Tela 3 */
+#tela-bem-vindo-2 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#tela-bem-vindo-2 .image-side {
+  flex: 1;
+}
+
+#tela-bem-vindo-2 .image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#tela-bem-vindo-2 .content-side {
+  flex: 1;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+#tela-bem-vindo-2 .content-side button {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: white;
+  color: red;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Tela 4 */
+#tela-bem-vindo-3 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#tela-bem-vindo-3 .image-side {
+  flex: 1;
+}
+
+#tela-bem-vindo-3 .image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#tela-bem-vindo-3 .content-side {
+  flex: 1;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+#tela-bem-vindo-3 .content-side button {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: white;
+  color: red;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#tela-bem-vindo-2 .content-side button:hover,
+#tela-bem-vindo-3 .content-side button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Tela Criar Conta */
+#tela-criar-conta {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: red;
+}
+
+#tela-criar-conta .criar-conta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#tela-criar-conta .criar-conta img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+}
+
+#tela-criar-conta .criar-conta h1 {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#tela-criar-conta .criar-conta-passo-a-passo {
+  flex: 1;
+  background-color: white;
+  border-radius: 30px 30px 0 0;
+  padding: 30px 20px;
+  overflow-y: auto;
+}
+
+#tela-criar-conta .criar-conta-passo-a-passo h1 {
+  color: #d10000;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#tela-criar-conta form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#tela-criar-conta form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#tela-criar-conta label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#tela-criar-conta input[type="text"],
+#tela-criar-conta input[type="email"],
+#tela-criar-conta input[type="password"] {
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+#tela-criar-conta input[type="text"]:focus,
+#tela-criar-conta input[type="email"]:focus,
+#tela-criar-conta input[type="password"]:focus {
+  border-color: #d10000;
+  outline: none;
+}
+
+#tela-criar-conta small {
+  color: #666;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+#tela-criar-conta .checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+#tela-criar-conta .checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #d10000;
+}
+
+#tela-criar-conta .checkbox-group label {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+#tela-criar-conta button[type="submit"] {
+  background-color: #d10000;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+#tela-criar-conta button[type="submit"]:hover {
+  background-color: #b00000;
+  transform: translateY(-2px);
+}
+
+#tela-criar-conta > p {
+  text-align: center;
+  margin: 15px 0;
+  color: white;
+}
+
+#tela-criar-conta a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#tela-criar-conta a:hover {
+  text-decoration: underline;
+}
+
+#tela-criar-conta fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+#tela-criar-conta legend {
+  color: white;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+#tela-criar-conta .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+#tela-criar-conta .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+#tela-criar-conta .social-icons a:hover {
+  background-color: white;
+  color: #d10000;
+  transform: translateY(-3px);
+}
+
+#tela-criar-conta aside {
+  display: none;
+}
+/* Garantir que o fieldset ocupe toda a largura */
+#tela-criar-conta fieldset {
+  width: 100%;
+  text-align: center;
+}
+
+/* Centralizar o legend */
+#tela-criar-conta legend {
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* Garantir que os parágrafos acima estejam centralizados */
+#tela-criar-conta .criar-conta-passo-a-passo > p {
+  text-align: center;
+  margin: 15px 0;
+  color: #666;
+}
+
+#tela-criar-conta .criar-conta-passo-a-passo > p a {
+  color: #d10000;
+  font-weight: bold;
+}
+
+/* Garantir que os ícones do Font Awesome sejam exibidos */
+.fab, .fas {
+  display: inline-block;
+}
+
+/* Estilo específico para os parágrafos acima dos ícones sociais */
+#tela-criar-conta .criar-conta-passo-a-passo > p {
+  text-align: center;
+  margin: 15px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+#tela-criar-conta .criar-conta-passo-a-passo > p a {
+  color: #d10000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#tela-criar-conta .criar-conta-passo-a-passo > p a:hover {
+  text-decoration: underline;
+}
+
+/* Melhorar a aparência do fieldset */
+#tela-criar-conta fieldset {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+#tela-criar-conta legend {
+  color: #d10000;
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+/* Estilo para os ícones sociais  todos os icones*/
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  font-size: 30px; /* aumenta o tamanho dos ícones */
+}
+
+.social-icons a {
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+/* Cores oficiais */
+.social-icons a .fa-google {
+  color: #DB4437; /* vermelho Google */
+}
+
+.social-icons a .fa-facebook-f {
+  color: #1877F2; /* azul Facebook */
+}
+
+.social-icons a .fa-instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* deixa o gradiente dentro do ícone */
+}
+
+.social-icons a:hover {
+  transform: scale(1.2); /* efeito zoom no hover */
+}
+
+/* ESTILOS DA TELA DE VERIFICAÇÃO */
+ #tela-verificar-codigo {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+#tela-verificar-codigo > div {
+  display: flex;
+  flex-direction: column; /* Organiza os elementos de cima para baixo */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  height: 100%; /* Garante que a div ocupe toda a altura disponível */
+}
+
+#tela-verificar-codigo img {
+  width: 125px; /* Defina o tamanho desejado para a imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 25px; /* Distância entre a imagem e o próximo elemento */
+}
+
+/* Garantir que o parágrafo tenha o estilo desejado */
+#tela-verificar-codigo p {
+  margin-top: 2vh;
+    color: black;
+    font-size: 18px;
+}
+#tela-verificar-codigo form {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Organiza os elementos do formulário de cima para baixo */
+    width: 100%; /* Garante que o formulário ocupe toda a largura disponível */
+    gap: 20px; /* Espaço entre os elementos do formulário */
+}
+
+/* Estilo para os inputs do código */
+#tela-verificar-codigo input {
+    margin-top: 4vh;
+    row-gap: 10px; /* Espaço entre as linhas */
+    width: 50px; /* Largura dos inputs */
+    height: 50px; /* Altura dos inputs */
+    font-size: 22px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto dentro do input */
+    border: 2px solid grey; /* Borda fina e cinza */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo */
+    transition: border-color 0.3s; /* Transição suave da cor da borda */
+}
+#tela-verificar-codigo button{
+    margin-top: 2vh;
+    width: 100%; /* Botão ocupa toda a largura do formulário */
+    padding: 12px; /* Espaçamento interno do botão */
+    background-color: red; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+}
+@media (max-width: 1920px) {
+  #tela-verificar-codigo img {
+    width: 20vw; /* imagem ocupa 20% da largura da tela */
+    max-width: 180px; /* nunca passa de 180px */
+    min-width: 80px;  /* nunca fica menor que 80px */
+  }
+
+  #tela-verificar-codigo > div {
+    padding: 0 20px; /* margem interna adaptável */
+  }
+}
+
+/* estilos para tela login */
+#tela-login {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+/* Cada lado ocupa exatamente metade */
+.login-left,
+.login-right {
+  flex: 0 0 50%;           /* base 50%, sem crescer/encolher */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Fundos */
+.login-left  { background: red;   border-top-left-radius: 20px; border-bottom-left-radius: 20px; }
+.login-right { background: #fff;  border-top-right-radius: 20px; border-bottom-right-radius: 20px; }
+
+/* Wrapper interno centralizado — evita usar margens em vh */
+.content {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Esquerda (logo + título) */
+.login-left img { width: 250px; height: auto; }
+.login-left h2  { color: #fff; font-size: 48px; line-height: 1; margin: 0; }
+
+/* Direita (título e form) */
+.login-right h2 { color: #000; font-size: 60px; margin: 0 0 8px; }
+
+/* === FORM ESTILO FIGMA === */
+.auth-form { width: 100%; display: flex; flex-direction: column; gap: 16px; }
+
+.field { position: relative; }
+.field .icon {
+  position: absolute; left: 0; top: 50%; translate: 0 -50%; color: #1a1a1a; pointer-events: none;
+}
+.field input {
+  width: 100%;
+  padding: 10px 8px 10px 36px;
+  border: none; outline: none; background: transparent;
+  border-bottom: 2px solid #d9d9d9; font-size: 16px;
+}
+.field input:focus { border-bottom-color: #000; }
+
+.remember { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+.checkbox { display: inline-flex; align-items: center; gap: 10px; position: relative; cursor: pointer; }
+.checkbox input { appearance: none; position: absolute; inset: 0; opacity: 0; }
+.checkbox .check { width: 22px; height: 22px; border-radius: 6px; background: #eee; border: 2px solid #d0d0d0; }
+.checkbox input:checked + .check { background: #e31c1c; border-color: #e31c1c; }
+.checkbox input:checked + .check::after {
+  content: ""; position: relative; left: 6px; top: 2px; display: inline-block;
+  width: 6px; height: 12px; border: 2px solid #fff; border-top: 0; border-left: 0; transform: rotate(45deg);
+}
+
+.forgot { color: #5c2cf0; text-decoration: none; font-size: 14px; }
+.forgot:hover { text-decoration: underline; }
+
+.btn { width: 100%; padding: 14px 16px; border-radius: 8px; border: none; font-weight: 700; cursor: pointer; }
+.btn-primary { background: #e31c1c; color: #fff; }
+.btn-primary:hover { opacity: .92; }
+
+.divider { display: flex; align-items: center; gap: 12px; }
+.divider::before, .divider::after { content: ""; height: 1px; background: #d9d9d9; flex: 1; }
+
+.btn-google { background: #fff; color: #e31c1c; border: 2px solid #e31c1c; }
+.btn-google:hover { background: #fff5f5; }
+
+.login-right p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.login-right p a {
+  color: #e31c1c;      /* vermelho igual ao botão */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-right p a:hover {
+  text-decoration: underline;
+}
+
+/* cores específicas de cada rede */
+.social-icons a:nth-child(1) { color: #db4437; }  /* Google */
+.social-icons a:nth-child(2) { color: #1877f2; }  /* Facebook */
+.social-icons a:nth-child(3) { color: #e4405f; }  /* Instagram */
+
+/* tela recuperar senha */
+#tela-recuperar-senha-email {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #0d0d0d;            /* fundo escuro da página (como no Figma) */
+  padding: 40px 16px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+               Arial, "Noto Sans", "Liberation Sans", "Apple Color Emoji",
+               "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* --- cartão branco --- */
+#tela-recuperar-senha-email .card {
+  width: 100%;
+  max-width: 760px;               /* largura similar ao mock */
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  padding: 56px 64px;
+  text-align: center;
+}
+
+/* logo/ilustração no topo */
+#tela-recuperar-senha-email .logo {
+  width: 68px;                    /* pequeno, centrado */
+  height: auto;
+  display: block;
+  margin: 0 auto 18px;
+  object-fit: contain;
+}
+
+/* títulos e descrição */
+#tela-recuperar-senha-email .titulo {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #111;
+}
+
+#tela-recuperar-senha-email .descricao {
+  margin: 0 auto 28px;
+  max-width: 560px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #2b2b2b;
+}
+
+/* --- formulário --- */
+#tela-recuperar-senha-email .form {
+  margin: 0 auto;
+  max-width: 520px;
+  text-align: left;               /* alinhar campo à esquerda */
+}
+
+/* rótulo fino acima do input */
+#tela-recuperar-senha-email .label {
+  display: block;
+  font-size: 12.5px;
+  color: #5a5a5a;
+  margin-bottom: 8px;
+}
+
+/* linha com ícone + input “linha única” */
+#tela-recuperar-senha-email .input-line {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1.6px solid #c9c9c9;
+  padding: 10px 2px;
+  transition: border-color .2s ease;
+  margin-bottom: 28px;
+}
+
+#tela-recuperar-senha-email .input-line:focus-within {
+  border-bottom-color: #e11928;   /* vermelho do brand ao focar */
+}
+
+#tela-recuperar-senha-email .icon {
+  font-size: 16px;
+  color: #8a8a8a;
+  line-height: 1;
+}
+
+#tela-recuperar-senha-email input[type="email"] {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 15px;
+  padding: 6px 0;
+  color: #111;
+}
+
+#tela-recuperar-senha-email input::placeholder {
+  color: #b6b6b6;
+}
+
+/* --- ações (botões lado a lado) --- */
+#tela-recuperar-senha-email .actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* dois botões com mesma largura */
+  gap: 16px;
+  margin-top: 6px;
+}
+
+#tela-recuperar-senha-email .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: filter .15s ease, transform .02s ease;
+}
+
+/* botão vermelho cheio */
+#tela-recuperar-senha-email .btn-primary {
+  background: #e11928;           /* vermelho (pode ajustar para o seu brand) */
+  color: #fff;
+  border: 1px solid #e11928;
+}
+
+#tela-recuperar-senha-email .btn-primary:hover {
+  filter: brightness(0.96);
+}
+
+#tela-recuperar-senha-email .btn-primary:active {
+  transform: translateY(1px);
+}
+
+/* segundo botão com a mesma cor, também cheio (como no mock) */
+#tela-recuperar-senha-email .btn-ghost {
+  /* se quiser versão outline, troque por: background:#fff;color:#e11928 */
+}
+
+/* --- responsividade --- */
+@media (max-width: 640px) {
+  #tela-recuperar-senha-email .card {
+    padding: 40px 20px;
+  }
+  #tela-recuperar-senha-email .actions {
+    grid-template-columns: 1fr;   /* empilha os botões no mobile */
+  }
+}
+
+
+/* tela redefenir senha */
+* { box-sizing: border-box; }
+
+#redefinir-login {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+/* Cada lado ocupa exatamente metade */
+.redefinir-left,
+.redefinir-right {
+  flex: 0 0 50%;           /* base 50%, sem crescer/encolher */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Fundos */
+.redefinir-left  { background: red;   border-top-left-radius: 20px; border-bottom-left-radius: 20px; }
+.redefinir-right { background: #fff;  border-top-right-radius: 20px; border-bottom-right-radius: 20px; }
+
+/* Wrapper interno centralizado — evita usar margens em vh */
+.content {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Esquerda (logo + título) */
+.redefinir-left img { width: 250px; height: auto; }
+.redefinir-left h2  { color: #fff; font-size: 48px; line-height: 1; margin: 0; }
+.redefinir-left h3  { color: #fff; font-size: 48px; line-height: 1; margin: 0; }
+
+/* Direita (título e form) */
+.redefinir-right h2 { color: #000; font-size: 60px; margin: 0 0 8px; }
+
+/* === FORM ESTILO FIGMA === */
+.auth-form { width: 100%; display: flex; flex-direction: column; gap: 16px; }
+
+.field { position: relative; }
+.field .icon {
+  position: absolute; left: 0; top: 50%; translate: 0 -50%; color: #1a1a1a; pointer-events: none;
+}
+.field input {
+  width: 100%;
+  padding: 10px 8px 10px 36px;
+  border: none; outline: none; background: transparent;
+  border-bottom: 2px solid #d9d9d9; font-size: 16px;
+}
+.field input:focus { border-bottom-color: #000; }
+
+.remember { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+.checkbox { display: inline-flex; align-items: center; gap: 10px; position: relative; cursor: pointer; }
+.checkbox input { appearance: none; position: absolute; inset: 0; opacity: 0; }
+.checkbox .check { width: 22px; height: 22px; border-radius: 6px; background: #eee; border: 2px solid #d0d0d0; }
+.checkbox input:checked + .check { background: #e31c1c; border-color: #e31c1c; }
+.checkbox input:checked + .check::after {
+  content: ""; position: relative; left: 6px; top: 2px; display: inline-block;
+  width: 6px; height: 12px; border: 2px solid #fff; border-top: 0; border-left: 0; transform: rotate(45deg);
+}
+
+.forgot { color: #5c2cf0; text-decoration: none; font-size: 14px; }
+.forgot:hover { text-decoration: underline; }
+
+.btn { width: 100%; padding: 14px 16px; border-radius: 8px; border: none; font-weight: 700; cursor: pointer; }
+.btn-primary { background: #e31c1c; color: #fff; }
+.btn-primary:hover { opacity: .92; }
+
+.divider { display: flex; align-items: center; gap: 12px; }
+.divider::before, .divider::after { content: ""; height: 1px; background: #d9d9d9; flex: 1; }
+
+.btn-google { background: #fff; color: #e31c1c; border: 2px solid #e31c1c; }
+.btn-google:hover { background: #fff5f5; }
+
+.redefinir-right p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.redefinir-right p a {
+  color: #e31c1c;      /* vermelho igual ao botão */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.redefinir-right p a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 640px) {
+  #tela-redefinir-senha-email .card {
+    padding: 40px 20px;
+  }
+  #tela-redefinir-senha-email .actions {
+    grid-template-columns: 1fr;   /* empilha os botões no mobile */
+  }
+}
+
+
+/* Responsivo: empilha só se precisares */
+@media (max-width: 860px) {
+  #tela-login { flex-direction: column; height: auto; min-height: 100vh; }
+  .login-left, .login-right { flex: 0 0 auto; width: 100%; border-radius: 0; }
+}
+
+/* Responsivo */
+@media (min-width: 860px) {
+  #tela-bem-vindo-2,
+  #tela-bem-vindo-3 {
+    flex-direction: row;
+  }
+  
+  #tela-bem-vindo-2 .image-side,
+  #tela-bem-vindo-3 .image-side {
+    flex: 1;
+  }
+  
+  #tela-bem-vindo-2 .content-side,
+  #tela-bem-vindo-3 .content-side {
+    flex: 1;
+  }
+
+  /* Layout para desktop da tela de criar conta */
+  #tela-criar-conta {
+    flex-direction: row;
+  }
+
+  #tela-criar-conta .criar-conta {
+    width: 40%;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  #tela-criar-conta .criar-conta img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #tela-criar-conta .criar-conta h1 {
+    font-size: 28px;
+  }
+
+  #tela-criar-conta .criar-conta-passo-a-passo {
+    width: 60%;
+    border-radius: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #tela-criar-conta .criar-conta-passo-a-passo h1 {
+    font-size: 24px;
+  }
+
+
+
+    /* Layout para desktop da tela login */
+  #tela-login {
+    flex-direction: row;
+  }
+
+  #login-left  {
+    width: 40%;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  #login-left .content img {
+    width: 150px;
+    height: 150px;
+  }
+
+ 
+
+  #login-rigth .content {
+    width: 60%;
+    border-radius: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+}
