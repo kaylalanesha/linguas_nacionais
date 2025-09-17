@@ -1,5 +1,5 @@
 [build]
-  publish = "telas"  # Agora o Netlify vai usar a pasta "telas" como raiz
+  publish = "Telas"  # Agora o Netlify vai usar a pasta "telas" como raiz
 
 [[redirects]]
   from = "/*"
