@@ -1,0 +1,7 @@
+[build]
+  publish = "telas"  # Agora o Netlify vai usar a pasta "telas" como raiz
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
